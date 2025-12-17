@@ -1,7 +1,7 @@
 vim9script
 
 if exists('g:colorful_windows_border_color')
-  execute 'highlight BorderHighlightGroup guifg=' . g:colorful_windows_color . ' guibg=NONE'
+  execute $'highlight BorderHighlightGroup guifg={g:colorful_windows_color} guibg=NONE'
 else
   highlight BorderHighlightGroup guifg=#FF8686 guibg=NONE
 endif
