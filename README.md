@@ -19,4 +19,5 @@ Use your plugin manager of choice to install
 
 ```
 g:colorful_windows_border_color = 'blue'
+g:colorful_windows_ignore_filetypes = ['nerdtree', 'qf', 'scratchpad']
 ```

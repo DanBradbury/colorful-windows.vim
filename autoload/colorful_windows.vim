@@ -6,8 +6,16 @@ else
   highlight BorderHighlightGroup guifg=#FF8686 guibg=NONE
 endif
 
+var ignore_filetypes = exists('g:colorful_windows_ignore_filetypes')
+  ? g:colorful_windows_ignore_filetypes
+  : ['nerdtree', 'qf']
+
 export def CreateColorfulWindow(): void
   popup_clear()
+
+  if index(ignore_filetypes, &filetype) >= 0
+    return
+  endif
 
   if tabpagewinnr(tabpagenr(), '$') == 1
     return
